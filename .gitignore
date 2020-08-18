@@ -1,0 +1,13 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+/.idea/.idea.Unity2018ReferenceFixer/.idea/contentModel.xml
+/.idea/.idea.Unity2018ReferenceFixer/.idea/indexLayout.xml
+/.idea/.idea.Unity2018ReferenceFixer/.idea/modules.xml
+/.idea/.idea.Unity2018ReferenceFixer/.idea/projectSettingsUpdater.xml
+/.idea/.idea.Unity2018ReferenceFixer/.idea/vcs.xml
+/.idea/.idea.Unity2018ReferenceFixer/.idea/workspace.xml
+*.csproj
+*.sln
