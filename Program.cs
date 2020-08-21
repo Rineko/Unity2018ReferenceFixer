@@ -63,6 +63,8 @@ namespace Unity2018ReferenceFixer
                 "  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}"},
             {"  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}",
                 "  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}"},
+            {"  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}",
+                "  m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}"},
         };
         
         static void Main(string[] args)
