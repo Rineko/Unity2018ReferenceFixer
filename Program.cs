@@ -74,10 +74,21 @@ namespace Unity2018ReferenceFixer
             foreach (var f in filesToFix)
             {
                 Console.WriteLine(f);
-                ReadAndFixFile(f);
+                // ReadAndFixFile(f);
+                FindTargetComponent(f);
             }
 
             Console.ReadKey();
+        }
+
+        static void FindTargetComponent(string path)
+        {
+            var targetComponentGuid = "fe87c0e1cc204ed48ad3b37840f39efc"; // Image component
+            
+            var txt = File.ReadAllText(path);
+            
+            if (txt.Contains(targetComponentGuid))
+                Console.WriteLine($"Match! {path} ---> \"Image\"");
         }
 
         static void ReadAndFixFile(string path)
