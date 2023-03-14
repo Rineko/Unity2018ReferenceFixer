@@ -71,24 +71,34 @@ namespace Unity2018ReferenceFixer
         {
             DirSearch(Directory.GetCurrentDirectory());
 
+            var targetGuid = "fe87c0e1cc204ed48ad3b37840f39efc";
+            var targetName = "Image";
+
+            var count = 0;
+            
             foreach (var f in filesToFix)
             {
-                Console.WriteLine(f);
+                // Console.WriteLine(f);
                 // ReadAndFixFile(f);
-                FindTargetComponent(f);
+                FindTargetComponent(f, targetGuid, targetName, ref count);
             }
+
+            Console.WriteLine();
+            Console.WriteLine("-----------------------------------------");
+            Console.WriteLine($"Total {targetName} components: {count}");
 
             Console.ReadKey();
         }
 
-        static void FindTargetComponent(string path)
+        static void FindTargetComponent(string path, string targetGuid, string targetName, ref int count)
         {
-            var targetComponentGuid = "fe87c0e1cc204ed48ad3b37840f39efc"; // Image component
-            
             var txt = File.ReadAllText(path);
-            
-            if (txt.Contains(targetComponentGuid))
-                Console.WriteLine($"Match! {path} ---> \"Image\"");
+
+            if (txt.Contains(targetGuid))
+            {
+                Console.WriteLine($"Match! {path} ---> {targetName}");
+                count++;
+            }
         }
 
         static void ReadAndFixFile(string path)
